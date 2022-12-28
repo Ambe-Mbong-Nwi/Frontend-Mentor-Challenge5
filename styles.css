@@ -1,0 +1,508 @@
+/*Desktop first approach*/
+body{
+    max-width: 1440px;
+    width: 100%;        
+    padding: 0;
+    min-height: 100vh;
+    display: grid;             /*centralise page*/
+    place-content: center;
+    font-family: Open Sans;
+    background-color:  white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 730px 710px;
+    grid-auto-rows: 200px 550px 230px 350px 300px 310px 400px;
+    max-width: 1440px;
+    padding: 0;
+    grid-gap: 0;
+}
+
+/*defining main grid areas*/
+.imgphone{
+    display: none;      /*displays only with phone width*/
+}
+
+.img1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 15px;
+    padding-left: 80px;
+    padding-top: 60px;
+}
+
+.img2{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 100%;    /*occupy only width of container*/
+    margin-top: 120px;
+}
+
+.img3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 90%;
+    padding-right: 60px;
+}
+
+.img4{
+    grid-column: 2/3;
+    grid-row: 4/6;
+    width: 80%;
+    background-color: hsl(240, 75%, 98%);
+    padding: 80px 72px 141px 70px;   /*top, right, bottom, left*/
+}
+
+.one{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 20px;
+    padding-top: 80px;
+    padding-left: 90px;
+}
+
+.two{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    padding-top: 28px;
+    padding-left: 90px;
+    padding-right: 0;
+    background-color: hsl(240, 75%, 98%);
+}
+
+.three{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    background-color: hsl(240, 75%, 98%);
+}
+
+.four{
+    grid-column: 1/3;
+    grid-row: 6/7;
+    display: grid;
+    grid-template-columns: 720px 720px;
+    grid-auto-rows: 150px 160px;
+    background-color: hsl(238, 22%, 44%);
+    opacity: 0.965;      /*makes color lighter*/
+}
+
+.five{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: right;
+    display: inline;
+}
+
+footer{
+    grid-column: 1/3;
+    grid-row: 7/8;
+    display: grid;
+    grid-template-columns: 420px 300px 260px 460px;
+    grid-auto-rows: 70px 150px;
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    padding: 100px 100px 0 90px;
+}
+
+/*.one and .two styles*/
+.one h1, .two h2{
+    color: hsl(243, 87%, 12%);
+    font-size: 2.7em;
+    line-height: 1.1em;
+    font-weight: bolder;
+}
+
+.one p, .two p{
+    font-size: 1.32em;
+    color: hsl(243, 87%, 12%);
+    padding-right: 10px;
+    font-weight: 540;
+}
+
+.one input{
+    padding: 14px 72px;
+}
+
+.one button{
+    color: white;
+    background-color:  hsl(224, 93%, 58%);
+    padding: 13.5px 61px;
+    margin-left: 15px;
+    font-size: 1.01em;
+    border: 0;
+    border-radius: 1px;
+}
+
+.two p{
+    padding-right: 70px;
+    font-size: 1.25em;
+}
+
+.two a{
+    color: hsl(170, 45%, 43%);
+}
+
+/*.three styles*/
+.wrapper{
+    margin-left: 85px;
+    margin-right: 255px;
+    padding: 20px 40px;
+    letter-spacing: 0.5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px seashell;   /*offset, shadow-radius, color*/
+}
+
+.avatar{
+    display: grid;
+    grid-template-columns: 45px 150px;
+    grid-auto-rows: 20px 15px;
+}
+
+/*targetting the avatar*/
+.avatar img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 35px;
+    border-radius: 50%;        /*become totally round*/
+}
+
+.avatar p{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    font-size: 12px;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.avatar h3{
+    grid-column: 2/2;
+    grid-row: 2/3;
+    font-size: 9px;
+    font-weight: lighter;
+    margin-top: 1px;
+}
+
+/*.four styles*/
+.four h2{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+    padding: 70px 100px 5px 90px;
+    font-size: 2.3em;
+}
+
+.four p{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: hsl(0, 0%, 85%);
+    font-size: 20px;
+    padding: 0px 90px 80px 90px;
+    font-weight: lighter;
+}
+
+.four input{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 450px;
+    height: 45px;
+    margin-top: 100px;
+    margin-left: 120px;
+    border-radius: 2px;
+    border: 0;
+    padding-left: 20px;   /*adjusting position of placeholder*/
+}
+
+::placeholder{
+    opacity: 0.35;    /*bluring the placeholder*/
+}
+
+.four button{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: hsl(224, 93%, 58%);
+    width: 225px;
+    height:45px;
+    border-radius: 2px;
+    border: 0;
+    margin-top: 10px;
+    margin-left: 120px;
+    color: white;
+}
+
+/*.five styles*/
+ul{
+    padding-top: 60px;
+    padding-right: 60px;
+}
+ul.five li{
+    display: inline;
+    list-style-type: none;
+    margin: 0 25px;
+    font-size: 1.25em;
+    margin-top: 0;
+}
+
+.five li a{
+    text-decoration: none;
+    color: hsl(243, 87%, 12%);
+}
+
+/*footer grid styles*/
+footer .logo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+footer .last1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    opacity: 0.8;
+}
+
+footer div ul{
+    list-style-type: none;        /*remove default list decoration*/
+    padding: 0;
+}
+
+ ul li{
+    padding-bottom: 15px;
+}
+
+ ul li img{
+    margin-right: 15px;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer .last2{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+footer .last3{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+footer .last4{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    color: white;
+}
+ 
+.last4 ul li{
+    padding-bottom: 0;
+    display: inline;
+}
+.last4 ul li a img{
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/*active state styles*/
+button:hover{
+    color: white;
+    background-color:  hsl(224, 100%, 76%);
+}
+
+a:hover{
+    color: hsl(170, 80%, 76%);
+}
+
+/*mobile design styles*/
+@media (max-width: 375px){
+    body{
+        max-width: 375px;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: 1;
+        box-sizing: border-box;
+        grid-auto-rows: 150px 250px 400px 105px 320px 430px 290px 400px 560px;
+        max-width: 375px;
+        grid-gap: 0;
+    }
+
+    /*defining main grid areas*/
+
+    .img2{
+        display: none;
+    }
+
+    .img1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-left: 15px;
+        padding-top: 30px;
+        padding-left: 0;
+        width: 100px;
+        display: inline;
+    }
+
+    .imgphone{
+        display: block;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        width: 375px;    /*occupy only width of container*/
+        margin-top: 60px;
+    }
+
+    .img3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 375px;
+        padding-right: 0;
+        margin-left: 18px;
+    }
+
+    .img4{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        width: 55%;
+        background-color: hsl(240, 75%, 98%);
+        padding: 15px;  /*top, right, bottom, left*/
+    }
+
+    .one{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 375px;
+        padding: 15px 0;
+    }
+
+    .two{
+        grid-column: 1/2;
+        grid-row: 6/7;
+        padding-top: 50px;
+        width: 375px;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: hsl(240, 75%, 98%);
+    }
+
+    .three{
+        grid-column: 1/2;
+        grid-row: 7/8;
+        width: 375px;
+        background-color: hsl(240, 75%, 98%);
+    }
+
+    .four{
+        grid-column: 1/2;
+        grid-row: 8/9;
+        width: 375px;
+        display: block;      /*removing the grid display*/
+    }
+
+    .five{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: left;
+        display: inline;
+    }
+
+    footer{
+        grid-column: 1/2;
+        grid-row: 9/10;
+        display: block;
+        box-sizing: border-box;       /*includes padding in calculation*/
+        width: 375px;
+        padding: 40px 25px;
+    }
+
+    /*.one and .two styles*/
+    .one h1, .two h2{
+        font-size: 1.9em;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .one p{
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .one input{
+        padding: 14px 72px;
+        margin: 0 28px;
+    }
+
+    .one button{
+        padding: 14px 117px;
+        margin-left: 26px;
+        margin-right: 26px;
+        margin-top: 20px;
+    }
+
+    .two p{
+        padding: 0 10px;
+        text-align: left;
+        font-size: 1.25em;
+    }
+
+    .two a{
+        margin: 0 112px;
+    }
+
+    /*.three styles*/
+    .wrapper{
+        margin: 0 20px;
+        padding: 20px;
+    }
+
+    /*.four styles*/
+    .four h2{
+        text-align: center;
+        padding: 0;
+        margin-top: 50px;
+        font-size: 2em;
+    }
+
+    .four p{
+        text-align: center;
+        font-size: 20px;
+        padding: 0 5px 15px 5px;
+    }
+
+    .four input{
+        width: 300px;
+        height: 40px;
+        margin: 0 34px;
+        padding-left: 0;   /*adjusting position of placeholder*/
+    }
+
+    .four button{
+        width: 302px;
+        height:40px;
+        margin: 10px 34px 0 34px;
+    }
+
+    /*.five styles*/
+    ul{
+        padding-top: 18px;
+        padding-right: 0;
+        margin-left: 120px;
+    }
+    ul.five li{
+        margin: 0 4px;
+    }
+
+    /*footer styles*/
+
+    footer div ul{
+        padding: 0;
+        margin-left: 0;
+    }
+
+    footer .last4{
+        margin-left: 120px;
+    }
+}
